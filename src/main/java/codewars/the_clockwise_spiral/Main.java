@@ -52,13 +52,13 @@ public class Main {
                     if (!(x == initial || x == end - 1 || y == initial || y == end - 1)) {
                         continue;
                     }
-                    int tr =  (y - x + end) / end;
-                    int off = ((x+1) + (y+1) - 1);
+                    int tr = (y - x + end) / end;
+                    int off = ((x + 1) + (y + 1) - 1);
                     int cur = tr * off + abs(tr - 1) * (4 * end - 2 - off);
                     spiral[x][y] = last + cur;
                 }
             }
-            initial  = initial + 1;
+            initial = initial + 1;
             end = end - 1;
             cycleCount = cycleCount + 1;
             last = spiral[initial][initial - 1] - (2 + (initial - 1) * 2);
@@ -67,15 +67,15 @@ public class Main {
     }
 
     public static int[][] createSpiral2(int N) {
-        int[][]res=new int [N][N];
-        for(int i=0; i<N; i++){
-            for(int j=0; j<N; j++){
+        int[][] res = new int[N][N];
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
                 int x = 2 * i - N + 1;
                 int y = 2 * j - N + 1;
                 int n = Math.max(Math.abs(x), Math.abs(y));
                 int p = (x + y) / 2;
                 if (i < j) p = 2 * n - p;
-                res [j][i] = N * N - n * n - n + p;
+                res[j][i] = N * N - n * n - n + p;
             }
         }
         return res;

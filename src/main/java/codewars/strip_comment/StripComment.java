@@ -10,15 +10,14 @@ public class StripComment {
     public static void main(String[] args) {
         assertEquals(
                 "apples, pears\ngrapes\nbananas",
-                StripComment.stripComments( "apples, pears # and bananas\ngrapes\nbananas !apples", new String[] { "#", "!" } )
+                StripComment.stripComments("apples, pears # and bananas\ngrapes\nbananas !apples", new String[]{"#", "!"})
         );
 
         assertEquals(
                 "a\nc\nd",
-                StripComment.stripComments( "a #b\nc\nd $e f g", new String[] { "#", "$" } )
+                StripComment.stripComments("a #b\nc\nd $e f g", new String[]{"#", "$"})
         );
     }
-
 
 
     public static String stripComments(String text, String[] commentSymbols) {

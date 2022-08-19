@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+//todo not resolved
 public class MergedStringChecker {
     public static void main(String[] args) {
         assertTrue("codewars can be created from code and wars", MergedStringChecker.isMerge("codewars", "code", "wars"));
